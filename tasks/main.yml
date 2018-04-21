@@ -1,0 +1,22 @@
+---
+- name: Clone Exploit Database
+  become: true
+  git:
+    repo: https://github.com/offensive-security/exploit-database.git
+    dest: "{{ searchsploit_git_location }}/exploit-database"
+    update: yes
+
+- name: Create symlink in /usr/local/bin
+  become: true
+  file:
+    src: "{{ searchsploit_git_location }}/exploit-database/searchsploit"
+    dest: "/usr/local/bin/searchsploit"
+    state: link
+
+- name: Copy resource files
+  become: true
+  copy:
+    src: "{{ searchsploit_git_location }}/exploit-database/.searchsploit_rc"
+    dest: "{{ ansible_env.HOME }}/.searchsploit_rc"
+    remote_src: yes
+    force: no
