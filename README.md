@@ -1,7 +1,7 @@
 Role Name
 =========
 
-Ansible role to install the Exploit Database.
+Install the Exploit Database.
 
 Requirements
 ------------
@@ -16,16 +16,16 @@ Role Variables
 Dependencies
 ------------
 
-leesoh.git
+* `leesoh.git`
 
 Example Playbook
 ----------------
 
-To begin:
-
+```yml
   - hosts: servers
     roles:
-        - { role: leesoh.searchsploit }
+        - leesoh.searchsploit
+```
 
 License
 -------
