@@ -13,6 +13,7 @@ script:
     - ansible-galaxy install leesoh.searchsploit
     - ansible-playbook -i tests/inventory tests/test.yml --syntax-check
     - ansible-playbook -i tests/inventory tests/test.yml --connection=local
+    - searchsploit
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
