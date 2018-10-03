@@ -1,12 +1,10 @@
 galaxy_info:
   author: liam somerville
+  role_name: searchsploit
   description: Installs the Exploit Database from Git
   license: BSD
   min_ansible_version: 1.2
   platforms:
-    - name: Debian
-      versions:
-      - all
     - name: Ubuntu
       versions:
       - all
